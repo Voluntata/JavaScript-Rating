@@ -1,0 +1,48 @@
+body {
+    height: 100vh; 
+    padding: 0;
+    margin: 0; 
+}
+
+.container {
+     width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.rating li {
+    list-style-type: none;
+}
+
+.rating-item {
+    margin: 0 auto;
+    vertical-align: middle;
+    font-size: 12em;
+    color:hotpink;
+    cursor: pointer;
+}
+
+.rating-item::before {
+    content: "\2661";
+}
+
+.rating > .rating-item:hover::before,
+.rating > .rating-item:hover ~ .rating-item::before{
+    color:indigo !important;
+}
+
+.rating > .rating-item.active:before{
+    color:indigo;
+}
+.rating > .rating-item.active ~ .rating-item::before{
+    color:indigo;
+}
+
